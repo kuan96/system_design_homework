@@ -13,7 +13,7 @@ public class ChooseMode implements ActionListener {
     JPanel button_panel = new JPanel();
     JButton b1 = new JButton();
     JButton b2 = new JButton();
-    ImageIcon image = new ImageIcon("C:\\Users\\member\\Downloads\\tictactoe.png");
+    ImageIcon image = new ImageIcon("src\\main\\tictactoe.png");
 
     public ChooseMode() {
         frame.setIconImage(image.getImage());
@@ -88,6 +88,7 @@ public class ChooseMode implements ActionListener {
             System.out.println("Single Player mode selected!");
         } else if (e.getSource() == b2) {
             System.out.println("Two Players mode selected!");
+            TwoPlayerMode two_player = new TwoPlayerMode();
         }
     }
 }

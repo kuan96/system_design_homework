@@ -9,7 +9,7 @@ public class TwoPlayerMode extends GameFrame{
 	private String[] text = new String[2];
 	private Color[] color = new Color[2];
 	private int turn;
-	private RecordFrame record;
+	private OperateFunctions function;
 	
 	public TwoPlayerMode()
 	{
@@ -21,12 +21,7 @@ public class TwoPlayerMode extends GameFrame{
 		
 		this.turn = 0;
 		
-		record = new RecordFrame();
-	}
-	
-	public void win(int player)
-	{
-		this.record.setScore(player);
+		this.function = new OperateFunctions();
 	}
 	
 	@Override
@@ -37,16 +32,34 @@ public class TwoPlayerMode extends GameFrame{
 				if(e.getSource() == buttons[i] && buttons[i].getText() == "") 
 				{
 					buttons[i].setForeground(this.color[turn]);
-					buttons[i].setText(this.text[turn]);	
+					buttons[i].setText(this.text[turn]);
+
+					if(function.check_win(buttons, this.text[turn]))
+					{
+						function.win(turn, buttons);
+					}
+					else if(function.check_tie(buttons))
+					{
+						function.tie(buttons);
+					}
+
 					this.turn = (this.turn + 1) % 2;
-					this.win(turn);
 				}		
 		 }
 	}
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// "r" : reset (text / color / turn / record)
+		//reset (text / color / turn / record)
+		// function.restart(buttons);
+		if(e.getKeyChar() == 'q')
+		{
+			System.exit(0);
+		}
+		if(e.getKeyChar() == 'r')
+		{
+			function.restart(buttons);
+		}
 	}
 
 	@Override
