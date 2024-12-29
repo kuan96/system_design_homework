@@ -1,9 +1,14 @@
 package main;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import javax.swing.*;
 
-public class GameFrame {
+public class GameFrame implements ActionListener,KeyListener{
 
     JFrame frame = new JFrame();
     JPanel title = new JPanel();
@@ -17,6 +22,7 @@ public class GameFrame {
         frame.getContentPane().setBackground(Color.darkGray);
         frame.setLayout(new BorderLayout());
         frame.setVisible(true);
+        frame.addKeyListener(this);
 
         textfield.setBackground(Color.darkGray);
         textfield.setForeground(Color.white);
@@ -37,10 +43,32 @@ public class GameFrame {
             button.add(buttons[i]);
             buttons[i].setFont(new Font("MV Boli", Font.BOLD, 100));
             buttons[i].setFocusable(false);
+            buttons[i].addActionListener(this);
         }
 
         frame.add(title, BorderLayout.NORTH);
         frame.add(button, BorderLayout.CENTER);
     }
+    
+    @Override
+	public void actionPerformed(ActionEvent e) {
+    	
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

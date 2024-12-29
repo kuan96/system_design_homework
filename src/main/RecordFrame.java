@@ -15,8 +15,14 @@ public class RecordFrame {
 	JPanel title3 = new JPanel();
 	JLabel textfield3 = new JLabel();
 	
+	private int[] score;
+	
 	public RecordFrame()
 	{
+		this.score = new int[2];
+		this.score[0] = 0;
+		this.score[1] = 0;
+		
 		frame.setTitle("Score");
 		frame.setSize(500,200);
 		frame.getContentPane().setBackground(Color.darkGray);
@@ -27,7 +33,7 @@ public class RecordFrame {
 		textfield.setForeground(Color.pink);
 		textfield.setFont(new Font("Comic Sans",Font.BOLD,35));
 		textfield.setHorizontalAlignment(JLabel.CENTER);
-		textfield.setText("player     vs.     player");
+		textfield.setText("player1     vs.     player2");
 		textfield.setOpaque(true);
 		
 		title.setLayout(new BorderLayout());	
@@ -37,7 +43,7 @@ public class RecordFrame {
 		textfield3.setForeground(Color.pink);
 		textfield3.setFont(new Font("Ink Free",Font.BOLD,50));
 		textfield3.setHorizontalAlignment(JLabel.CENTER);
-		textfield3.setText("0    :    0");
+		textfield3.setText(this.score[0] + "    :    " + this.score[1]);
 		textfield3.setOpaque(true);
 
 		title3.setLayout(new BorderLayout());
@@ -46,4 +52,11 @@ public class RecordFrame {
 		frame.add(title,BorderLayout.NORTH);
 		frame.add(title3);
 	}
+	
+	public void setScore(int player)
+	{
+		this.score[player] = this.score[player] + 1;
+		this.textfield3.setText(this.score[0] + "    :    " + this.score[1]);
+	}
+	
 }

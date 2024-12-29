@@ -2,12 +2,11 @@ package test;
 
 import main.*;
 
-public class Test_RecordFrame {
+public class Test_SingleMode {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		RecordFrame frame = new RecordFrame();
-//		frame.setScore(1);
+		SingleMode single = new SingleMode();
 	}
 
 }
