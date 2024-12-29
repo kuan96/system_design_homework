@@ -86,6 +86,7 @@ public class ChooseMode implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b1) {
             System.out.println("Single Player mode selected!");
+            SingleMode single = new SingleMode();
         } else if (e.getSource() == b2) {
             System.out.println("Two Players mode selected!");
             TwoPlayerMode two_player = new TwoPlayerMode();
