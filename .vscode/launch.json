@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "main.Main",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_ChooseMode",
+            "request": "launch",
+            "mainClass": "test.Test_ChooseMode",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_GameFrame",
+            "request": "launch",
+            "mainClass": "test.Test_GameFrame",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_InputHandler",
+            "request": "launch",
+            "mainClass": "test.Test_InputHandler",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_OperateFunctions",
+            "request": "launch",
+            "mainClass": "test.Test_OperateFunctions",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_RecordFrame",
+            "request": "launch",
+            "mainClass": "test.Test_RecordFrame",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_SingleMode",
+            "request": "launch",
+            "mainClass": "test.Test_SingleMode",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_TwoPlayerMode",
+            "request": "launch",
+            "mainClass": "test.Test_TwoPlayerMode",
+            "projectName": "HW10_Final_Project"
+        },
+        {
+            "type": "java",
+            "name": "Test_playerData",
+            "request": "launch",
+            "mainClass": "test.Test_playerData",
+            "projectName": "HW10_Final_Project"
+        }
+    ]
+}
